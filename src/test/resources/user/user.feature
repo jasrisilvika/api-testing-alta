@@ -25,14 +25,14 @@ Feature: User
     And validate the data detail after generate token
     And get token for other request
 
-  Scenario: GET - As a user I have to be able to get detail user
-    Given I set an endpoint for GET detail user
-    When I request GET detail user
-    Then I validate the status code is 200
-    And validate the data detail
-
   Scenario: GET - As a user I have to authorized myself
     Given I set an endpoint for authorized myself
     When I request POST authorized myself
     Then I validate the status code is 200
     And validate the data detail for authorized
+
+   Scenario: GET - As a user I have to be able to get detail user
+    Given I set an endpoint for GET detail user
+    When I request GET detail user
+    Then I validate the status code is 200
+    And validate the data detail
